@@ -1,0 +1,40 @@
+This document records the steps taken to complete this project in the inevitable scenario I forget how I did it.
+
+1. Created the project folder, initialized the virtual environment, and started the django project.
+
+mkdir backend-capstone-git
+cd backend-capstone-git
+python -m venv ./venv
+source venv/bin/activate
+pip install django
+django-admin startproject littlelemon
+
+2. Create Github repository, link local folder to remote
+
+On github.com, created new repository backend-capstone-git that's completely empty
+
+In local ../backend-capstone-git directory:
+git init
+touch .gitignore
+
+Add __pycache__ and venv/ to .gitignore
+
+git add *
+git commit -m "Initial commit"
+git remote add origin git@github.com:bweavey/backend-capstone-git.git
+
+git push -u origin main
+
+3. Opened project in Visual Studio Code, selected Python interpreter, created restaurant app
+
+Open Visual Studio Code
+Open Folder -> ../backend-capstone-git
+Open Terminal in VScode
+	source venv/bin/activate
+ctrl+shift+p Select Python Interpreter -> .venv/bin/python
+	cd littlelemon
+	python manage.py startapp restaurant
+
+4. Pushed changes to Github using branch->merge method
+
+
