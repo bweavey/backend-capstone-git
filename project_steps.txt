@@ -37,4 +37,16 @@ ctrl+shift+p Select Python Interpreter -> .venv/bin/python
 
 4. Pushed changes to Github using branch->merge method
 
+git checkout -b dev
+git add .
+git commit -m "Initialized restaurant app"
+git push -u origin dev
 
+On Github
+Click "Compare & pull request"
+Click "Create pull request"
+Click "Merge pull request" and "Confirm"
+
+git checkout main
+git pull
+git branch -d dev
