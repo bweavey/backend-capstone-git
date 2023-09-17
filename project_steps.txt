@@ -50,3 +50,48 @@ Click "Merge pull request" and "Confirm"
 git checkout main
 git pull
 git branch -d dev
+
+5. Set up the static routes
+
+In ../backend-capstone-git/littlelemon
+
+mkdir templates
+touch templates/index.html
+
+In settings.py, added 'templates' to 'DIRS' list in TEMPLATES
+
+Added basic html to templates/index.html
+Added index view to restaurants/views.py
+Added restaurant/urls.py and mapped index.html to index view
+Added restaurant.urls to littlelemon/urls.py
+
+mkdir ..restaurants/static/restaurant
+add littlelemon.png to above folder
+
+In index.html, add static tag and img tag
+
+6. Set up MySQL database
+(venv) user % pip install mysqlcient
+Update default DATABASES in settings.py
+
+In mysql
+create database LittleLemon;
+exit
+
+python manage.py migrate
+
+In order to successfully use MySQL viewer extension in VScode
+mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
+exit
+
+7. Setting up Django models
+Created Booking and Menu models in restaurant/models.py according to schema
+Performed migrations
+Added models to restaurant/admin.py using admin.site.register
+
+python manage.py createsuperuser
+username: admin
+password: password
+
+added littlelemon/restaurant/migrations/* to .gitignore
