@@ -95,3 +95,38 @@ username: admin
 password: password
 
 added littlelemon/restaurant/migrations/* to .gitignore
+
+8. Add APIs
+
+(venv) user % pip install djangorestframework
+
+added rest_framework to INSTALLED_APPS
+Added restaurant/serializers.py file and created a MenuSerializer class 
+Added MenuView and SingleMenuView classes in restaurant/views.py
+Added paths to views in restaurant/urls.py
+Checked browsable API at restaurant/menu/ worked
+
+Added BookingSerilizer class to restaurant/serializers.py
+Add BookingViewSet class to restaurant/views.py
+Added BookingViewSet url pattern in littlelemon/urls.py using router
+
+9. Add authentication
+Added rest_framework.authtoken to INSTALLED_APPS
+Added REST_FRAMEWORK variable to settings.py
+Adjusted Menu model to MenuItem
+added IsAuthenticated to permission_classes of all views
+
+(venv) user% pip install djoser
+
+Added djoser to INSTALLED_APPS
+Added DJOSER variable to settings.py
+Added djoser urls to /auth in littelemon/urls.py
+
+10. Testing
+
+Deleted empty restaurant/tests.py file
+created littlelemon/tests/ folder
+Added  test-models.py and included MenuItemTest
+Added test-views.py but wasn't sure how to test views.
+
+
