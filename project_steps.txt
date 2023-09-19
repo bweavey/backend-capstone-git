@@ -132,4 +132,16 @@ Added test-views.py but wasn't sure how to test views.
 11. Adjusted project structure
 Added static assets and html framework from previous course, mapped urls, updated booking
 
+12. Test views
+Fixed the test_views file.
+
+python manage.py test
+
+returns OK
+
+13. Finalized project for submission
+Created README
+Added some stock menu items and bookings
+
+
 

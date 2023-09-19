@@ -11,7 +11,7 @@ urlpatterns = [
     path('reservations/', views.reservations, name="reservations"),
     path('bookings/', views.bookings, name="bookings"),
     path('api/menu-items/', views.MenuItemsView.as_view()),
-    path('api/menu-items/<int:pk>', views.SingleMenuItemView.as_view()),
+    path('api/menu-items/<int:pk>', views.SingleMenuItemView.as_view(), name="menu_item"),
     path('api/api-token-auth/', obtain_auth_token),
 
 ]
