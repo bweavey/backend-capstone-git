@@ -3,8 +3,9 @@ from django.db import models
 # Create your models here.
 class Booking(models.Model):
     name = models.CharField(max_length=255)
-    no_of_guests = models.PositiveIntegerField()
+    no_of_guests = models.PositiveIntegerField(default=1)
     booking_date = models.DateField()
+    reservation_slot = models.SmallIntegerField(default=10)
 
     def __str__(self): 
         return self.name

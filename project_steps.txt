@@ -129,4 +129,7 @@ created littlelemon/tests/ folder
 Added  test-models.py and included MenuItemTest
 Added test-views.py but wasn't sure how to test views.
 
+11. Adjusted project structure
+Added static assets and html framework from previous course, mapped urls, updated booking
+
 
